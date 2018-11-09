@@ -37,12 +37,12 @@ body{
 
 }
 .link{
-	color: #ED553B;
+	color: #112F41;
 	font-weight: bold;
 }
 .link:visited
 {
-	color: #F2B134;
+	color: #068587;
 }
 header{
 	background: #112F41;
@@ -55,6 +55,10 @@ h1{
 	text-transform: uppercase;
 }
 .sas{
+	color: #112F41;
+	font-weight: bold;
+}
+.logo{
 	color: #F2B134;
 	font-weight: bold;
 }
