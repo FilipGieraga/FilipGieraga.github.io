@@ -1,3 +1,4 @@
+"use strict";
 let complete = document.querySelectorAll(".complete");
 let remove = document.querySelectorAll(".remove");
 let edit = document.querySelectorAll(".edit");
@@ -10,10 +11,12 @@ const taskAdder = document.querySelector('input[value="Add"]');
 const allTasks = document.querySelector(".alltasks");
 createNew.style.display = "none";
 let data = 1;
-if (localStorage.getItem("content").trim()) {
-  allTasks.insertAdjacentHTML("afterbegin", localStorage.getItem("content"));
-  data=localStorage.getItem("dataAtr")
-  eventListenersForECR();
+if (localStorage.getItem("content")) {
+  if (localStorage.getItem("content").trim()) {
+    allTasks.insertAdjacentHTML("afterbegin", localStorage.getItem("content"));
+    data = localStorage.getItem("dataAtr").trim();
+    eventListenersForECR();
+  }
 }
 
 function taskDone(e) {
@@ -55,7 +58,7 @@ function taskAdded(e) {
     inputVal.value = "";
     return;
   }
-  toDo = inputVal.value.trim();
+  let toDo = inputVal.value.trim();
   const htmlToAddTask = `<div class="listtask" data-task="${data}">
         <div class="note"><h3>${toDo}</h3></div>
         <div class="icons">
