@@ -11,6 +11,7 @@ const taskAdder = document.querySelector('input[value="Add"]');
 const allTasks = document.querySelector(".alltasks");
 createNew.style.display = "none";
 let data = 1;
+let activeEdit = false;
 if (localStorage.getItem("content")) {
   if (localStorage.getItem("content").trim()) {
     allTasks.insertAdjacentHTML("afterbegin", localStorage.getItem("content"));
@@ -20,6 +21,7 @@ if (localStorage.getItem("content")) {
 }
 
 function taskDone(e) {
+  if (activeEdit) return;
   const currentTask = this.closest(".listtask").getAttribute("data-task");
   const taskByData = document.querySelector(`[data-task='${currentTask}']`);
   const textContentH3 = taskByData.querySelector("h3");
@@ -33,6 +35,7 @@ function taskDone(e) {
 }
 
 function taskRemove(e) {
+  if (activeEdit) return;
   const currentTask = this.closest(".listtask").getAttribute("data-task");
   const taskByData = document.querySelector(`[data-task='${currentTask}']`);
   taskByData.remove();
@@ -53,6 +56,7 @@ function hideCreateForm() {
 
 function taskAdded(e) {
   e.preventDefault();
+  if (activeEdit) return;
   let inputVal = document.querySelector('input[type="newTask"]');
 
   if (!inputVal.value.trim()) {
@@ -86,7 +90,6 @@ function eventListenersForECR() {
   complete = document.querySelectorAll(".complete");
   remove = document.querySelectorAll(".remove");
   edit = document.querySelectorAll(".edit");
-
   for (let i = 0; i < complete.length; i++) {
     complete[i].addEventListener("click", taskDone);
   }
@@ -101,6 +104,11 @@ function eventListenersForECR() {
 
 function editTask(e) {
   e.preventDefault();
+  if (!activeEdit) {
+    activeEdit = true;
+  } else {
+    return;
+  }
   const currentTask = this.closest(".listtask").getAttribute("data-task");
   const taskByData = document.querySelector(`[data-task='${currentTask}']`);
   const notePart = taskByData.querySelector(".note");
@@ -126,6 +134,7 @@ function editTask(e) {
     iconsPart.style.display = "";
     formCloser.reset();
     formCloser.style.display = "none";
+    activeEdit = false;
   }
   discardBtn.addEventListener("click", hideForm);
   saveBtn.addEventListener("click", function (e) {
@@ -134,14 +143,16 @@ function editTask(e) {
     let inputVal = formCloser.querySelector('input[type="newTask"]');
     if (!inputVal.value.trim()) {
       inputVal.value = "";
+      inputVal.focus();
       return;
+    } else {
+      let edited = inputVal.value.trim();
+      // const textContentH3 = taskByData.querySelector("h3");
+      hideForm();
+      textContentH3.textContent = edited;
+      localStorage.setItem(`content`, allTasks.innerHTML);
+      activeEdit = false;
     }
-    let edited = inputVal.value.trim();
-    // const textContentH3 = taskByData.querySelector("h3");
-    hideForm();
-    textContentH3.textContent = edited;
-    localStorage.setItem(`content`, allTasks.innerHTML);
-
     // textContentH3.style.textDecoration = "";
   });
 
