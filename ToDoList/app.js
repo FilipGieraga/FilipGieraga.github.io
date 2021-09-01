@@ -42,6 +42,7 @@ function taskRemove(e) {
 function revealCreateForm() {
   addNew.style.display = "none";
   createNew.style.display = "";
+  document.querySelector('input[type="newTask"]').focus();
 }
 
 function hideCreateForm() {
@@ -116,6 +117,10 @@ function editTask(e) {
   const formCloser = taskByData.querySelector(".edittask");
   const saveBtn = taskByData.querySelector('input[value="Save"]');
   const discardBtn = taskByData.querySelector('input[value="Discard"]');
+  formCloser.querySelector('input[type="newTask"]').focus();
+  formCloser
+    .querySelector('input[type="newTask"]')
+    .setSelectionRange(1000, 1000);
   function hideForm() {
     notePart.style.display = "";
     iconsPart.style.display = "";
@@ -127,7 +132,6 @@ function editTask(e) {
     e.preventDefault();
 
     let inputVal = formCloser.querySelector('input[type="newTask"]');
-
     if (!inputVal.value.trim()) {
       inputVal.value = "";
       return;
