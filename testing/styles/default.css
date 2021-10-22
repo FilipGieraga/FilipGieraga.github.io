@@ -467,7 +467,7 @@ h6 {
   flex-direction: row;
   justify-content: center;
   column-gap: 150px;
-  margin: 20px 0px;
+  /* margin: 20px 0px; */
 }
 .send-to-projects i {
   font-size: 50px;
@@ -478,21 +478,86 @@ h6 {
 .icon2 {
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  width: 80px;
+  border-radius: 12px;
+  width: 120px;
   height: 80px;
   transition: transform 500ms;
 }
 
 .icon1:hover {
   background-color: #6e5494;
-  transform: scale(1.2);
 }
 
 .icon2:hover {
   background-color: #f06529;
-  transform: scale(1.2);
 }
+
+/* Animations */
+
+.greeting-wrapper h1 {
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.left-column,
+.right-column {
+  animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.3s both;
+}
+.single-project .cert-container {
+  animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.about-me {
+  animation: scale-in-ver-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.3s both;
+}
+.icon1,
+.icon2 {
+  animation: scale-in-ver-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
 
 @media screen and (max-width: 1200px) {
   .main-container {
@@ -563,5 +628,16 @@ h6 {
   }
   #skills {
     column-gap: 30px;
+  }
+  .send-to-projects {
+    column-gap: 50px;
+  }
+  .send-to-projects i {
+    font-size: 30px;
+  }
+  .icon1,
+  .icon2 {
+    width: 90px;
+    height: 60px;
   }
 }

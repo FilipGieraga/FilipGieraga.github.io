@@ -36,21 +36,16 @@ function setTheme(mode) {
 }
 
 const sr = ScrollReveal({
-  distance: "60px",
+  distance: "0px",
   duration: 2500,
   delay: 200,
   // reset: true,
+  useDelay: "onload",
   easing: "ease-in",
 });
 
-sr.reveal(`.greeting-wrapper`, { origin: "top" });
-sr.reveal(`.left-column`, { origin: "left", delay: 600, distance: "100px" });
-sr.reveal(`.right-column`, {
-  origin: "right",
-  delay: 600,
-  distance: "100px",
-});
-// sr.reveal(`.main-container`, { delay: 700, origin: "left" });
+
+
 sr.reveal(`.post`, {
   interval: 300,
   origin: "bottom",
@@ -62,29 +57,4 @@ sr.reveal(`.post`, {
   duration: 1000,
 });
 
-sr.reveal(`.left-transition`, {
-  rotate: {
-    x: -20,
-    y: -20,
-    z: -20,
-  },
 
-  delay: 1200,
-});
-
-sr.reveal(`.right-transition`, {
-  rotate: {
-    x: 20,
-    y: 20,
-    z: 20,
-  },
-  delay: 1200,
-});
-
-// sr.reveal(`.specs__data, .discount__animate`, {
-//   origin: "left",
-//   interval: 100,
-// });
-// sr.reveal(`.specs__img, .discount__img`, { origin: "right" });
-// sr.reveal(`.case__img`, { origin: "top" });
-// sr.reveal(`.case__data`);
