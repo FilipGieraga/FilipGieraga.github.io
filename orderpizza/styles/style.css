@@ -115,7 +115,8 @@ body {
 .card {
   position: absolute;
   width: 0%;
-  min-height: 100%;
+  min-height: 70vh;
+  border-radius: 0px 0px 0px 20px;
   top: 0%;
   left: 100%;
   background-color: #d96704;
@@ -138,6 +139,7 @@ body {
 .card .card-content .submit-order {
   margin: 0;
   margin-left: 12%;
+  margin-bottom: 20px;
   width: 76%;
   float: none;
   font-size: 1.2rem;
