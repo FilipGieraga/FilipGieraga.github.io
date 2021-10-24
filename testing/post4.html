@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hangman</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <a href="index.html">
+        <div class="dots-wrapper">
+          <div id="dot-1" class="browser-dot"></div>
+          <div id="dot-2" class="browser-dot"></div>
+          <div id="dot-3" class="browser-dot"></div>
+        </div>
+      </a>
+
+      <ul id="navigation">
+        <li><a href="mailto:filg93@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <div class="single-project">
+        <br />
+        
+        <div class="cert-container">
+          <img src="images/pic4.1.png" />
+        </div>
+        <h3>Hangman</h3>
+
+        <div class="send-to-projects">
+          <a href="https://github.com/FilipGieraga/Javascript-ENG/tree/main/Hangman" target="_blank">
+            <div class="icon1">
+              <i class="ri-github-line"></i></div
+          ></a>
+          <a href="https://filipgieraga.github.io/hangman/" target="_blank">
+            <div class="icon2">
+              <i class="ri-code-s-slash-line"></i></div
+          ></a>
+        </div>
+        <!-- <h5>DESCRIPTION:</h5> -->
+        <p>
+          Game starts with a window that gives player a choice to play 1v1 or against computer picking random word. 
+          <br />
+          <br />
+          If you play against computer:<br>
+          <br />
+          Input Password and Category fields are temporarily disabled and you can only specify the number of tries, you'd like to have(1-15, default = 11).<br />
+          The password can be generated in polish(special characters included) or english and it can be from 5 to 10 letters long.<br />
+          There are 2 additional files storing english and polish words of different length and a function that takes an array of words and a number of letters entered by user to generate a random password, it returns one word for a player to guess.
+          <br />
+          <br />
+          If you play 1v1:<br>
+          <br />
+          You or your opponent can specify the password(field hidden, 5-20 letters).
+          <br />
+          You or your opponent can specify number of tries(optional, 1-15 tries, default = 11) and category(optional, 20 letters max)
+          <br />
+          <br />
+          The game itself shows you password length, category(if specified), time of current game session, used letters, tries and tries you have left.
+          <br /><br />
+          <strong>Additional features:</strong>
+          <br />
+          Responsive Web Design
+          <br />
+        </p>
+        <h5>Technologies:</h5>
+        <ul>
+          <li>- Vanilla Javascript</li>
+          <li>- SASS/CSS</li>
+          <li>- HTML</li>
+        </ul>
+       
+      </div>
+    </div>
+    <footer>
+      <p>Filip Gieraga 2021&#169 </p>
+    </footer>
+  </body>
+</html>

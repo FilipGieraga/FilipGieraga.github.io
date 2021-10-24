@@ -35,26 +35,31 @@ function setTheme(mode) {
   localStorage.setItem("theme", mode);
 }
 
+// Animations
+
 const sr = ScrollReveal({
   distance: "0px",
   duration: 2500,
-  delay: 200,
+  delay: 400,
   // reset: true,
   useDelay: "onload",
   easing: "ease-in",
 });
 
-
-
 sr.reveal(`.post`, {
   interval: 300,
   origin: "bottom",
   rotate: {
-    x: 100,
-    y: 100,
-    z: 100,
+    x: 40,
+    y: 40,
+    z: 40,
   },
   duration: 1000,
 });
 
-
+sr.reveal(`footer p`, {
+  origin: "top",
+  distance: "20px",
+  duration: 1000,
+  delay: 700,
+});

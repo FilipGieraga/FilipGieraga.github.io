@@ -396,7 +396,7 @@ h6 {
   flex-basis: calc(80% / 3);
   background-color: var(--secondaryColor);
   border-radius: 20px;
-  min-height: 382.75px;
+  min-height: 350px;
   min-width: 300px;
   margin-bottom: 30px;
 }
@@ -443,6 +443,9 @@ h6 {
 .single-project img {
   width: 100%;
 }
+.single-project {
+  margin: 20px 0px 40px;
+}
 
 .certificates h3,
 .certificates h5,
@@ -468,6 +471,7 @@ h6 {
   justify-content: center;
   column-gap: 150px;
   /* margin: 20px 0px; */
+  /* margin-top: 20px; */
 }
 .send-to-projects i {
   font-size: 50px;
@@ -491,7 +495,16 @@ h6 {
 .icon2:hover {
   background-color: #f06529;
 }
-
+footer p {
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+}
+footer {
+  background-color: var(--secondaryColor);
+  padding: 15px 0px;
+  border-top: 1px solid var(--borderColor);
+}
 /* Animations */
 
 .greeting-wrapper h1 {
@@ -562,6 +575,9 @@ h6 {
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
+  }
+  .about-wrapper {
+    gap: 50px;
   }
 }
 
