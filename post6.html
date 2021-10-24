@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order Pizza</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <a href="index.html#anchor">
+        <div class="dots-wrapper">
+          <div id="dot-1" class="browser-dot"></div>
+          <div id="dot-2" class="browser-dot"></div>
+          <div id="dot-3" class="browser-dot"></div>
+        </div>
+      </a>
+
+      <ul id="navigation">
+        <li><a href="mailto:Filip.Gieraga@outlook.com">Contact</a></li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <div class="single-project">
+        <br />
+        <div class="cert-container">
+          <img src="images/pic6.1.png" />
+        </div>
+
+        <h3>Order Pizza</h3>
+        <div class="send-to-projects">
+          <a href="https://github.com/FilipGieraga/Javascript-ENG/tree/main/OrderPizza" target="_blank">
+            <div class="icon1">
+              <i class="ri-github-line"></i></div
+          ></a>
+          <a href="https://filipgieraga.github.io/orderpizza/" target="_blank">
+            <div class="icon2">
+              <i class="ri-code-s-slash-line"></i></div
+          ></a>
+        </div>
+        <!-- <h5>DESCRIPTION:</h5> -->
+        <p>
+          My first object-oriented programming project in Javascript for pizza ordering.
+          <br />
+          <br />
+          First class of this project is Pizza, the constructor takes 5 parameters, which are:<br /><br />
+          name, ingredients, small, medium, large
+          <br />
+          <br />
+          Pizza class contains a variable allIngs that keeps all possible ingredients used for any created instance of this class.<br>
+          There is also Pizza.counter variable starting at 0, that increments every time new instance of this class is created.<br>It also automatically add a num property to every instance.<br>
+          Pizza.makeYourOwn is an object that stores prices for clients that want to create a custom pizza on demand.<br>
+          Random instance of pizza class below:<br><br>
+          <strong>new Pizza("Mafiozo", [5, 6, 7, 11], 14, 18, 24);</strong><br><br>
+          With each newly created instance there are 3 methods that run simultaneously.<br>
+          initIngs() converts array of indexes into actual ingredients declared in Pizza.allIngs. By that it's easier to avoid human error like misspelling.
+          <br />
+          initAddToMenu() adds new instance to an object wholeMenu that stores all instances of the class.<br>
+          initAddToWebsite() automatically adds new recipe with its prices and ingredients to website.<br><br>
+          showAllIngs() logs all ingredients to the console with corresponding indexes.<br>
+          information() logs all information about an individual instance of a class.<br>
+          static method sizes() show all 3 available sizes of pizza in cm.<br>
+          <br />
+          The second class of this project is Order, the constructor also takes 5 parameters, which are:<br /><br />
+          pizzaname, amount, price, size, subtotal
+          <br />
+          <br />
+          Class variable Order.counter starts at 0 and increments every time new order is added to the cart.<br>It also automatically add a num property to every order instance similarly to previous class.<br>
+          Order.total also starts at 0 and keeps track of all subtotals from the cart.<br>
+          Random instance of pizza class below:<br><br>
+          <strong>new order("Primavera", 3, 15, "S", 45);</strong><br><br>
+          With each newly created instance of order there are 3 methods that run simultaneously.<br>
+          addToAllOrders() adds new instance to an object allOrders that stores all instances of the class.<br>
+          countTotal() takes the subtotal from this instance of a class and adds it to Order.total variable. It also updates the total DOM element.<br>
+          addToSidebar() adds order to sidebar.<br>
+          The only other method in this class is deleteFromSidebar() and it cooperates with eventListener. The method itself is triggered by eventListener and removes subtotal of this particular instance from total and instance from allOrders object. EventListener removes DOM from document.<br><br>
+          Other than those 2 classes and their methods, there are total of 3 pop-ups and a sidebar for a user to interact with:<br>
+          First pop-up allows user to create a new custom pizza that will be added to the menu, pizza can have 3 to 5 ingredients and the prices will adjust accordingly.<br>
+          Second pop-up is to add pizza to the cart, you can specify the amount and size. Subtotal of this order will be refreshed with every adjustment.<br>
+          Sidebar contains all orders, allows to delete any of them, and show total price. It also has a button to submit the order.<br>
+          Last pop-up shows all orders, total, and asks for delivery details. You can provide arbitrary information, I made address info obligatory just to make it more real.
+          <br><br>
+          Once you hit the send button those information go to my email with EmailJS in a form shown below. Only Custom orders are shown with ingredients.<br>
+          <br />
+          <strong>Additional features:</strong>
+          <br />
+          Responsive Web Design
+          <br />
+        </p>
+        <h5>Technologies:</h5>
+        <ul>
+          <li>- Vanilla Javascript</li>
+          <li>- EmailJS</li>
+          <li>- SASS/CSS</li>
+          <li>- HTML</li>
+        </ul>
+        <div class="cert-container to-left">
+          <img src="images/pic6.2.jpg" />
+        </div><div class="cert-container to-left">
+          <img src="images/pic6.3.jpg" />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Filip Gieraga 2021&#169 </p>
+    </footer>
+  </body>
+</html>

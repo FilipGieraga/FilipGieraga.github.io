@@ -2,35 +2,15 @@
 <html>
 <head>
 	<title>Certificates</title>
-
-
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-
 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="default.css">
-
-
-	<style type="text/css">
-		.img-container{
-			max-width: 600px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		img{
-			width: 100%
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="styles/default.css">
 
 </head>
 <body>
 	<div class="nav-wrapper">
 
-		<!-- Link around dots-wrapper added after tutorial video -->
 		<a href="index.html">
 			<div class="dots-wrapper">
 				<div id="dot-1" class="browser-dot"></div>
@@ -42,40 +22,56 @@
 	</div>
 
 	<div class="main-container">
-		<br>
-
-	<!----	<div class="img-container">
-			<img src="images/dash.jpg">
-		</div>---->
 		
-		<center><h3>My certificates:</h3></center>
-		<br>
-		<br>
-			<div class="img-container">
-				<img src="images/dyp.jpg" class="center">
+		<div class="certificates">
+		<h3>My certificates:</h3>
+		
+			<div class="cert-container">
+				<img src="images/dyp.jpg">
 			</div>
-		<center><h5>Bachelor's in Analytical Economics</h5></center>
-		<br>
-		<br>
-			<div class="img-container">
-				<img src="images/cer1.jpg" class="center">
+			<h5>Bachelor's in Analytical Economics</h5>
+		
+			<div class="cert-container">
+				<img src="images/cer4.jpg">
 			</div>
-		<center><h5>Finished course on HTML/CSS</h5></center>
-		<br>
-		<br>
-		<div class="img-container">
-			<img src="images/cer2.jpg" class="center">
-		</div>
-		<center><h5>Finished Python 3 Bootcamp</h5></center>
-		<br>
-		<br>
-		<div class="img-container">
-			<img src="images/cer3.jpg" class="center">
-		</div>
-		<center><h5>Finished course on SQL</h5></center>
-		<center><h6>Done in year 2019 </h6></center>
-		<br>
-		<br>
+			<h5>Finished Javascript course</h5>
 
+			<div class="cert-container">
+				<img src="images/cer1.jpg">
+			</div>
+			<h5>Finished course on HTML/CSS fundamentals</h5>
+		
+		<div class="cert-container">
+			<img src="images/cer2.jpg">
+		</div>
+		<h5>Finished Python 3 Bootcamp</h5>
+		
+		<div class="cert-container">
+			<img src="images/cer3.jpg">
+		</div>
+		<h5>Finished SQL bootcamp</h5>
+		
+	</div>
+	</div>
+	<footer>
+		<p>Filip Gieraga 2021&#169 </p>
+	  </footer>
+
+
+	<script src="scrollreveal.min.js"></script>
+    <script type="text/javascript">
+		const sr = ScrollReveal({
+  distance: "0px",
+  duration: 1000,
+  delay: 200,
+  useDelay: "onload",
+  easing: "ease-in",
+});
+sr.reveal(`img`, {
+	scale: 0.6
+});
+
+
+	</script>
 </body>
 </html>
