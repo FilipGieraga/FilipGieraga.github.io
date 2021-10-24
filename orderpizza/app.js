@@ -101,7 +101,7 @@ Large:52cm`
 
   showAllIngs() {
     this.allIngs.forEach(function (element, index) {
-      console.log(`${index + 1}: ${element}`);
+      console.log(`${index}: ${element}`);
     });
   }
 }
