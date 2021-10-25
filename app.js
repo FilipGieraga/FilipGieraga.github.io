@@ -62,4 +62,5 @@ sr.reveal(`footer p`, {
   distance: "20px",
   duration: 1000,
   delay: 700,
+  mobile: false,
 });
