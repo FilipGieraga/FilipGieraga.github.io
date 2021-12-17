@@ -570,6 +570,40 @@ footer {
   }
 }
 
+.stack-icons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.stack-icon {
+  display: flex;
+  margin-left: 5px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.bg-js {
+  background-color: #f7df1e;
+}
+.bg-css {
+  background-color: #264de4;
+}
+.bg-sass {
+  background-color: #cd6799;
+}
+.bg-html {
+  background-color: #e34c26;
+}
+.bg-bs {
+  background-color: #553c75;
+}
+.bg-firebase {
+  background-color: #ffa611;
+}
+.bg-react {
+  background-color: #61dbfb;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
